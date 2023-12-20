@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.table {
+    display: table;
+}
+@media (hover:hover) {
+    .table tr.hover:hover,
+  .table tr.hover:nth-child(even):hover {
+        --tw-bg-opacity: 1;
+        background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+    }
+}
+@media (hover:hover) {
+    .table tr.hover:hover,
+  .table tr.hover:nth-child(even):hover {
+        --tw-bg-opacity: 1;
+        background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+    }
+}
+.table {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+    border-radius: var(--rounded-box, 1rem16px);
+}
+.table :where(.table-pin-rows thead tr) {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.table :where(.table-pin-rows tfoot tr) {
+    position: sticky;
+    bottom: 0px;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.table :where(.table-pin-cols tr th) {
+    position: sticky;
+    left: 0px;
+    right: 0px;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.table :where(th, td) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    vertical-align: middle;
+}
+.table tr.active,
+  .table tr.active:nth-child(even),
+  .table-zebra tbody tr:nth-child(even) {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+}
+.table tr.active,
+  .table tr.active:nth-child(even),
+  .table-zebra tbody tr:nth-child(even) {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+}
+/* .table :where(thead, tbody) :where(tr:not(:last-child)),
+    .table :where(thead, tbody) :where(tr:first-child:last-child) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-bottom-color: hsl(var(--b2) / var(--tw-border-opacity));
+}
+.table :where(thead, tbody) :where(tr:not(:last-child)),
+    .table :where(thead, tbody) :where(tr:first-child:last-child) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-bottom-color: hsl(var(--b2) / var(--tw-border-opacity));
+} */
+.table :where(thead, tfoot) {
+    white-space: nowrap;
+    font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+    font-weight: 700;
+    color: hsl(var(--bc) / 0.6);
+}
+
+.hover-menu {
+  position: relative;
+}
+
+.hover-menu::after {
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+}
+
+.login-bg {
+  width: 100%;
+  background: linear-gradient(#a1d2ff, #00e0c6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login {
+  background-color: rgba(266, 266, 266, 0.2);
+}
