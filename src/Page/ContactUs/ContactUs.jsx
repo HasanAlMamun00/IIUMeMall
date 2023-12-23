@@ -13,7 +13,7 @@ const ContactUs = () => {
             email,
             message
         }
-        fetch('http://localhost:5000/contactUs', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/contactUs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

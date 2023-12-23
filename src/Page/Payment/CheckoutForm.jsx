@@ -30,7 +30,7 @@ const CheckoutForm = ({ menuItems }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://kind-pear-gorilla-kilt.cyclic.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -102,7 +102,7 @@ const CheckoutForm = ({ menuItems }) => {
                 transactionId: paymentIntent.id,
                 payment_type: 'Online'
             }
-            fetch('http://localhost:5000/booking', {
+            fetch('https://kind-pear-gorilla-kilt.cyclic.app/booking', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

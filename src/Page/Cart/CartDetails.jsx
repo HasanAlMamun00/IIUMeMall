@@ -9,7 +9,7 @@ const CartDetails = ({ item, refetch }) => {
     const [quantity, setQuantity] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cafe/${item?.cafeId}?itemId=${item?.productId}`)
+        fetch(`https://kind-pear-gorilla-kilt.cyclic.app/cafe/${item?.cafeId}?itemId=${item?.productId}`)
             .then((res) => res.json())
             .then((data) => setQuantity(data));
     }, [item?.cafeId, item?.productId]);
@@ -23,7 +23,7 @@ const CartDetails = ({ item, refetch }) => {
             order: (data?.order + 1),
             totalPrice: ((data?.order + 1) * data?.productPrice)
         }
-        fetch('http://localhost:5000/cart', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const CartDetails = ({ item, refetch }) => {
             order: (data?.order - 1),
             totalPrice: ((data?.order - 1) * data?.productPrice)
         }
-        fetch('http://localhost:5000/cart', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -71,7 +71,7 @@ const CartDetails = ({ item, refetch }) => {
         const sendData = {
             id: id,
         }
-        fetch('http://localhost:5000/cart', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

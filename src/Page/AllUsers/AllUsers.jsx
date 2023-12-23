@@ -14,7 +14,7 @@ const AllUsers = () => {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ['/userReg'],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/userReg`)
+      const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/userReg`)
       const data = await res.json();
       return data;
     }
@@ -32,7 +32,7 @@ const AllUsers = () => {
     const data = {
       id: id
     }
-    fetch('http://localhost:5000/userReg', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/userReg', {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

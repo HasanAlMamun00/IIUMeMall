@@ -5,7 +5,7 @@ const AllContacts = () => {
     const { data: contacts = [] } = useQuery({
         queryKey: ['/contactUs'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/contactUs`)
+            const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/contactUs`)
             const data = await res.json();
             return data;
         }

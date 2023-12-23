@@ -20,7 +20,7 @@ const GoogleLogin = () => {
   const saveUser = (email) => {
     const user = { email };
     fetch(
-      "http://localhost:5000/userReg",
+      "https://kind-pear-gorilla-kilt.cyclic.app/userReg",
       {
         method: "POST",
         headers: {

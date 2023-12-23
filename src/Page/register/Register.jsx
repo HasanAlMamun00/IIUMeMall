@@ -35,7 +35,7 @@ const Register = () => {
   const saveUser = (email) => {
     const user = { email, role };
     fetch(
-      "http://localhost:5000/userReg",
+      "https://kind-pear-gorilla-kilt.cyclic.app/userReg",
       {
         method: "POST",
         headers: {

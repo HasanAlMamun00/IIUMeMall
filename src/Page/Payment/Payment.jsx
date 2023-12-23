@@ -19,7 +19,7 @@ const Payment = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cart/single/${cartId}`)
+        fetch(`https://kind-pear-gorilla-kilt.cyclic.app/cart/single/${cartId}`)
             .then((res) => res.json())
             .then((data) => setMenuItems(data));
     }, [cartId]);
@@ -40,7 +40,7 @@ const Payment = () => {
             status: 'cash on delivery',
             payment_type: 'Cash on Delivery'
         }
-        fetch('http://localhost:5000/booking', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

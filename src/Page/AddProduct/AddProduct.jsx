@@ -32,7 +32,7 @@ const AddProduct = () => {
                         email: user,
                         quantity: data.quantity
                     }
-                    fetch('http://localhost:5000/cafe', {
+                    fetch('https://kind-pear-gorilla-kilt.cyclic.app/cafe', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

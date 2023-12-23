@@ -18,7 +18,7 @@ const CafeDetails = () => {
   const [menuItems, setMenuItems] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cafe/${cafeId}?itemId=${itemId}`)
+    fetch(`https://kind-pear-gorilla-kilt.cyclic.app/cafe/${cafeId}?itemId=${itemId}`)
       .then((res) => res.json())
       .then((data) => setMenuItems(data));
   }, [cafeId, itemId]);
@@ -49,7 +49,7 @@ const CafeDetails = () => {
       cafeId: cafeId,
       productId: itemId
     }
-    fetch('http://localhost:5000/wishlist', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/wishlist', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -81,7 +81,7 @@ const CafeDetails = () => {
       cafeId: cafeId,
       productId: itemId
     }
-    fetch('http://localhost:5000/wishlist', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/wishlist', {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -112,7 +112,7 @@ const CafeDetails = () => {
       order: quantity,
       totalPrice: menuItems?.data?.itemdata?.price * quantity
     }
-    fetch('http://localhost:5000/cart', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -144,7 +144,7 @@ const CafeDetails = () => {
       order: quantity,
       totalPrice: menuItems?.data?.itemdata?.price * quantity
     }
-    fetch('http://localhost:5000/cart', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

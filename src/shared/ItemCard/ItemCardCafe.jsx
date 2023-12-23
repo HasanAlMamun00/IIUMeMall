@@ -23,7 +23,7 @@ const ItemCardCafe = ({ item, cafeId, ownerInfo }) => {
       order: 1,
       totalPrice: item?.price
     }
-    fetch('http://localhost:5000/cart', {
+    fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

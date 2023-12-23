@@ -7,7 +7,7 @@ const Stores = () => {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/cafe?productType=store")
+        fetch("https://kind-pear-gorilla-kilt.cyclic.app/cafe?productType=store")
             .then((res) => res.json())
             .then((data) => setMenuItems(data));
     }, []);

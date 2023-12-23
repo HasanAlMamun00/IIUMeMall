@@ -77,7 +77,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userReg/${user}`, {
+        fetch(`https://kind-pear-gorilla-kilt.cyclic.app/userReg/${user}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

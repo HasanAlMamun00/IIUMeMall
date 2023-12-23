@@ -10,7 +10,7 @@ const PurchaseHistory = () => {
     const { refetch, data: bookings = [] } = useQuery({
         queryKey: ['/booking', user],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/booking/${user}`)
+            const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/booking/${user}`)
             const data = await res.json();
             return data;
         }
@@ -21,7 +21,7 @@ const PurchaseHistory = () => {
             id: item?._id,
             status: 'receive'
         }
-        fetch('http://localhost:5000/booking', {
+        fetch('https://kind-pear-gorilla-kilt.cyclic.app/booking', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
