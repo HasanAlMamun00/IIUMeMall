@@ -33,7 +33,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (searchTerm) {
-      fetch(`https://kind-pear-gorilla-kilt.cyclic.app/cafe/search?searchTerm=${searchTerm}`)
+      fetch(`https://llumemall-backend.vercel.app/cafe/search?searchTerm=${searchTerm}`)
         .then((response) => response.json())
         .then((data) => setMenuItems(data));
     } else {

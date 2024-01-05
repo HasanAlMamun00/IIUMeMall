@@ -12,7 +12,7 @@ const MyProduct = () => {
     const { refetch, data: products = [] } = useQuery({
         queryKey: ['/cafe/myProduct', user],
         queryFn: async () => {
-            const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/cafe/myProduct/${user}`)
+            const res = await fetch(`https://llumemall-backend.vercel.app/cafe/myProduct/${user}`)
             const data = await res.json();
             return data;
         }
@@ -25,7 +25,7 @@ const MyProduct = () => {
             cafeId,
             productId: id
         }
-        fetch('https://kind-pear-gorilla-kilt.cyclic.app/cafe', {
+        fetch('https://llumemall-backend.vercel.app/cafe', {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const Order = () => {
     const { refetch, data: bookings = [] } = useQuery({
         queryKey: ['/booking', user],
         queryFn: async () => {
-            const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/booking/seller/${user}`)
+            const res = await fetch(`https://llumemall-backend.vercel.app/booking/seller/${user}`)
             const data = await res.json();
             return data;
         }
@@ -20,7 +20,7 @@ const Order = () => {
             id: item?._id,
             status: 'to ship'
         }
-        fetch('https://kind-pear-gorilla-kilt.cyclic.app/booking', {
+        fetch('https://llumemall-backend.vercel.app/booking', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

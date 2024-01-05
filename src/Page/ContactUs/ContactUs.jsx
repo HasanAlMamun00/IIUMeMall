@@ -13,7 +13,7 @@ const ContactUs = () => {
             email,
             message
         }
-        fetch('https://kind-pear-gorilla-kilt.cyclic.app/contactUs', {
+        fetch('https://llumemall-backend.vercel.app/contactUs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

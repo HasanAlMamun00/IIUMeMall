@@ -35,7 +35,7 @@ const Register = () => {
   const saveUser = (email) => {
     const user = { email, role };
     fetch(
-      "https://kind-pear-gorilla-kilt.cyclic.app/userReg",
+      "https://llumemall-backend.vercel.app/userReg",
       {
         method: "POST",
         headers: {

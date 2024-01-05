@@ -19,7 +19,7 @@ const EditProduct = ({ data, setIsEdit, cafeId, refetch }) => {
             productId: productId,
             quantity: data?.quantity
         }
-        fetch('https://kind-pear-gorilla-kilt.cyclic.app/cafe', {
+        fetch('https://llumemall-backend.vercel.app/cafe', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -77,7 +77,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        fetch(`https://kind-pear-gorilla-kilt.cyclic.app/userReg/${user}`, {
+        fetch(`https://llumemall-backend.vercel.app/userReg/${user}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

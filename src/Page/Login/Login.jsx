@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import toast from "react-hot-toast";
 import GoogleLogin from "../../shared/GoogleLogin";
+import ForgetPassword from "./ForgetPassword";
 
 const Login = () => {
 
@@ -15,6 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [checkBox, setCheckBox] = useState(false);
+  const [forgetPassword, setForgetPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -94,11 +96,12 @@ const Login = () => {
                         className="w-full py-2 px-4 outline-none border-none rounded-md font-semibold"
                       />
                     </div>
-                    <div>
+                    <div className="flex items-center justify-between">
                       <label>
                         <input onClick={() => setCheckBox(!checkBox)} type="checkbox" className="accent-[#016170]" />{" "}
                         Remember Me
                       </label>
+                      <p onClick={() => setForgetPassword(true)} className="cursor-pointer underline text-[#016170]">Forget Password</p>
                     </div>
                     <div className="flex justify-center mt-6">
                       {
@@ -144,6 +147,9 @@ const Login = () => {
           </div>
         </div>
       </section>
+      {
+        forgetPassword && <ForgetPassword setForgetPassword={setForgetPassword} />
+      }
     </div>
   );
 };

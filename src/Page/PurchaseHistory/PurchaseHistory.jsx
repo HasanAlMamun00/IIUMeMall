@@ -10,7 +10,7 @@ const PurchaseHistory = () => {
     const { refetch, data: bookings = [] } = useQuery({
         queryKey: ['/booking', user],
         queryFn: async () => {
-            const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/booking/${user}`)
+            const res = await fetch(`https://llumemall-backend.vercel.app/booking/${user}`)
             const data = await res.json();
             return data;
         }
@@ -21,7 +21,7 @@ const PurchaseHistory = () => {
             id: item?._id,
             status: 'receive'
         }
-        fetch('https://kind-pear-gorilla-kilt.cyclic.app/booking', {
+        fetch('https://llumemall-backend.vercel.app/booking', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

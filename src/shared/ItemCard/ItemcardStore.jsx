@@ -23,7 +23,7 @@ const ItemcardStore = ({ item, cafeId, ownerInfo }) => {
       order: 1,
       totalPrice: item?.price
     }
-    fetch('https://kind-pear-gorilla-kilt.cyclic.app/cart', {
+    fetch('https://llumemall-backend.vercel.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

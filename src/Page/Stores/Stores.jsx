@@ -7,7 +7,7 @@ const Stores = () => {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
-        fetch("https://kind-pear-gorilla-kilt.cyclic.app/cafe?productType=store")
+        fetch("https://llumemall-backend.vercel.app/cafe?productType=store")
             .then((res) => res.json())
             .then((data) => setMenuItems(data));
     }, []);

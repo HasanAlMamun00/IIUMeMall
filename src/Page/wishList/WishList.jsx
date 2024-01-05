@@ -7,7 +7,7 @@ const WishList = () => {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
-    fetch(`https://kind-pear-gorilla-kilt.cyclic.app/wishlist/${user}`)
+    fetch(`https://llumemall-backend.vercel.app/wishlist/${user}`)
       .then((res) => res.json())
       .then((data) => setMenuItems(data));
   }, [user]);

@@ -13,7 +13,7 @@ const Profile = () => {
   const { refetch, data: userInfo = [] } = useQuery({
     queryKey: ['userReg', user],
     queryFn: async () => {
-      const res = await fetch(`https://kind-pear-gorilla-kilt.cyclic.app/userReg/${user}`)
+      const res = await fetch(`https://llumemall-backend.vercel.app/userReg/${user}`)
       const data = await res.json();
       return data;
     }
@@ -43,7 +43,7 @@ const Profile = () => {
               address: data.address ? data.address : userInfo?.data?.address,
               date_birth: data.date_birth ? data.date_birth : userInfo?.data?.date_birth
             }
-            fetch('https://kind-pear-gorilla-kilt.cyclic.app/userReg', {
+            fetch('https://llumemall-backend.vercel.app/userReg', {
               method: 'PATCH',
               headers: {
                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const Profile = () => {
         address: data.address ? data.address : userInfo?.data?.address,
         date_birth: data.date_birth ? data.date_birth : userInfo?.data?.date_birth
       }
-      fetch('https://kind-pear-gorilla-kilt.cyclic.app/userReg', {
+      fetch('https://llumemall-backend.vercel.app/userReg', {
         method: 'PATCH',
         headers: {
           'content-type': 'application/json'
