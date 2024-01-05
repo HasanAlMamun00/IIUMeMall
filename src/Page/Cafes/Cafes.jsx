@@ -6,7 +6,7 @@ const Cafes = () => {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://llumemall-backend.vercel.app/cafe?productType=cafe")
+    fetch("http://localhost:5000/cafe?productType=cafe")
       .then((res) => res.json())
       .then((data) => setMenuItems(data));
   }, []);

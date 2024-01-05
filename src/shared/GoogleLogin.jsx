@@ -20,7 +20,7 @@ const GoogleLogin = () => {
   const saveUser = (email) => {
     const user = { email };
     fetch(
-      "https://llumemall-backend.vercel.app/userReg",
+      "http://localhost:5000/userReg",
       {
         method: "POST",
         headers: {

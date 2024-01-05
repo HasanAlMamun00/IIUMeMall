@@ -19,7 +19,7 @@ const EditProduct = ({ data, setIsEdit, cafeId, refetch }) => {
             productId: productId,
             quantity: data?.quantity
         }
-        fetch('https://llumemall-backend.vercel.app/cafe', {
+        fetch('http://localhost:5000/cafe', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

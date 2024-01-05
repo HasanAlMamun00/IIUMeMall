@@ -13,7 +13,7 @@ const ContactUs = () => {
             email,
             message
         }
-        fetch('https://llumemall-backend.vercel.app/contactUs', {
+        fetch('http://localhost:5000/contactUs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

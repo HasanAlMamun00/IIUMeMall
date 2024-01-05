@@ -19,7 +19,7 @@ const Payment = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://llumemall-backend.vercel.app/cart/single/${cartId}`)
+        fetch(`http://localhost:5000/cart/single/${cartId}`)
             .then((res) => res.json())
             .then((data) => setMenuItems(data));
     }, [cartId]);
@@ -40,7 +40,7 @@ const Payment = () => {
             status: 'cash on delivery',
             payment_type: 'Cash on Delivery'
         }
-        fetch('https://llumemall-backend.vercel.app/booking', {
+        fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

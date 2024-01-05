@@ -32,7 +32,7 @@ const AddProduct = () => {
                         email: user,
                         quantity: data.quantity
                     }
-                    fetch('https://llumemall-backend.vercel.app/cafe', {
+                    fetch('http://localhost:5000/cafe', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

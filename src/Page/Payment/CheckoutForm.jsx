@@ -30,7 +30,7 @@ const CheckoutForm = ({ menuItems }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("https://llumemall-backend.vercel.app/create-payment-intent", {
+        fetch("http://localhost:5000/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -102,7 +102,7 @@ const CheckoutForm = ({ menuItems }) => {
                 transactionId: paymentIntent.id,
                 payment_type: 'Online'
             }
-            fetch('https://llumemall-backend.vercel.app/booking', {
+            fetch('http://localhost:5000/booking', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -23,7 +23,7 @@ const ItemCardCafe = ({ item, cafeId, ownerInfo }) => {
       order: 1,
       totalPrice: item?.price
     }
-    fetch('https://llumemall-backend.vercel.app/cart', {
+    fetch('http://localhost:5000/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

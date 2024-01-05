@@ -35,7 +35,7 @@ const Register = () => {
   const saveUser = (email) => {
     const user = { email, role };
     fetch(
-      "https://llumemall-backend.vercel.app/userReg",
+      "http://localhost:5000/userReg",
       {
         method: "POST",
         headers: {

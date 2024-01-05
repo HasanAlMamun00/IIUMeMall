@@ -77,7 +77,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        fetch(`https://llumemall-backend.vercel.app/userReg/${user}`, {
+        fetch(`http://localhost:5000/userReg/${user}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
